@@ -24,49 +24,53 @@ ls -l
 # This will check to see if the ROSBuildScripts directory exist in the /home/<userDirectoryName>
 # In my case the user for this build will be <steamclown> , but it could be <steamclown2> or some other name.  
 # Update based on your userDirectoryName insid of your /home directory
-DIR="/ROSBuildScripts/"
-if [[ ! -e $dir ]]; then
-    sudo mkdir $dir
-elif [[ ! -d $dir ]]; then
-    echo "$dir already exists but is not a directory" 1>&2
+DIR="/home/steamclown/ROSBuildScripts/"
+if [ -d "$DIR" ]; then
+  ### Take action if $DIR exists ###
+  echo "Installing config files in ${DIR}..."
+
+else
+  ###  Control will jump here if $DIR does NOT exists ###
+  echo "Did not find and Creating ${DIR}..."
+  sudo mkdir $DIR
 fi
-# add check to test if the Scripts dir exists and create if it does not...
-sudo cd $dir
-pwd
-ls -l
 
-echo "----------------------------------------------------"
-echo "Running CPROSBuildScripts.sh to copy a bunch of scritps.  The "
-echo "expectation is that they are copied to the /root/Scripts directory "
-echo "----------------------------------------------------"
-echo " "
-echo "----------------------------------------------------"
-echo "Copying UbuntuUpdate.sh script"
-echo "----------------------------------------------------"
-echo " "
-sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/UbuntuUpdate.sh -O UbuntuUpdate.sh
-sudo chmod 755 UbuntuUpdate.sh
-# sudo cat UbuntuUpdate.sh
-echo " "
-echo "----------------------------------------------------"
-echo "Done Copying UbuntuUpdate.sh script"
-echo "----------------------------------------------------"
-echo " "
+    cd $DIR
+    pwd
+    ls -l
 
-echo "Copying NewROSBuild.sh script"
-echo "----------------------------------------------------"
-echo " "
-sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/NewROSBuild.sh -O NewROSBuild.sh
-sudo chmod 755 NewROSBuild.sh
-# sudo cat NewROSBuild.sh
-echo " "
-echo "----------------------------------------------------"
-echo "Done Copying NewROSBuild.sh script"
-echo "----------------------------------------------------"
-echo " "
+    echo "----------------------------------------------------"
+    echo "Running CPROSBuildScripts.sh to copy a bunch of scritps.  The "
+    echo "expectation is that they are copied to the /root/Scripts directory "
+    echo "----------------------------------------------------"
+    echo " "
+    echo "----------------------------------------------------"
+    echo "Copying UbuntuUpdate.sh script"
+    echo "----------------------------------------------------"
+    echo " "
+    sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/UbuntuUpdate.sh -O UbuntuUpdate.sh
+    sudo chmod 755 UbuntuUpdate.sh
+    # sudo cat UbuntuUpdate.sh
+    echo " "
+    echo "----------------------------------------------------"
+    echo "Done Copying UbuntuUpdate.sh script"
+    echo "----------------------------------------------------"
+    echo " "
 
-echo " "
-echo "----------------------------------------------------"
-echo "Done Copying a bunch of scripts"
-echo "----------------------------------------------------"
-echo " "
+    echo "Copying NewROSBuild.sh script"
+    echo "----------------------------------------------------"
+    echo " "
+    sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/NewROSBuild.sh -O NewROSBuild.sh
+    sudo chmod 755 NewROSBuild.sh
+    # sudo cat NewROSBuild.sh
+    echo " "
+    echo "----------------------------------------------------"
+    echo "Done Copying NewROSBuild.sh script"
+    echo "----------------------------------------------------"
+    echo " "
+
+    echo " "
+    echo "----------------------------------------------------"
+    echo "Done Copying a bunch of scripts"
+    echo "----------------------------------------------------"
+    echo " "
