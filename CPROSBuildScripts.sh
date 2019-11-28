@@ -22,7 +22,7 @@
 pwd
 ls -l
 # add check to test if the Scripts dir exists and create if it does not...
-sudo cd /Scripts
+sudo cd ./home/steamclown/Scripts
 pwd
 ls -l
 
@@ -35,7 +35,7 @@ echo "----------------------------------------------------"
 echo "Copying UbuntuUpdate.sh script"
 echo "----------------------------------------------------"
 echo " "
-sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/UbuntuUpdate.sh -O ./Scrips/UbuntuUpdate.sh
+sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/UbuntuUpdate.sh -O UbuntuUpdate.sh
 sudo chmod 755 UbuntuUpdate.sh
 # sudo cat UbuntuUpdate.sh
 echo " "
@@ -47,7 +47,7 @@ echo " "
 echo "Copying NewROSBuild.sh script"
 echo "----------------------------------------------------"
 echo " "
-sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/NewROSBuild.sh -O ./Scrips/NewROSBuild.sh
+sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/NewROSBuild.sh -O NewROSBuild.sh
 sudo chmod 755 NewROSBuild.sh
 # sudo cat NewROSBuild.sh
 echo " "
