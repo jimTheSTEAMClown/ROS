@@ -24,7 +24,7 @@ ls -l
 # This will check to see if the ROSBuildScripts directory exist in the /home/<userDirectoryName>
 # In my case the user for this build will be <steamclown> , but it could be <steamclown2> or some other name.  
 # Update based on your userDirectoryName insid of your /home directory
-DIR="/home/steamclown/ROSBuildScripts/"
+DIR="/ROSBuildScripts/"
 if [[ ! -e $dir ]]; then
     mkdir $dir
 elif [[ ! -d $dir ]]; then
