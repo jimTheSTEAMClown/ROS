@@ -26,7 +26,7 @@ ls -l
 # Update based on your userDirectoryName insid of your /home directory
 DIR="/ROSBuildScripts/"
 if [[ ! -e $dir ]]; then
-    mkdir $dir
+    sudo mkdir $dir
 elif [[ ! -d $dir ]]; then
     echo "$dir already exists but is not a directory" 1>&2
 fi
