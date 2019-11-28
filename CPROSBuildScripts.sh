@@ -47,27 +47,18 @@ fi
     echo "----------------------------------------------------"
     echo "Copying UbuntuUpdate.sh script"
     echo "----------------------------------------------------"
-    echo " "
     sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/UbuntuUpdate.sh -O UbuntuUpdate.sh
     sudo chmod 755 UbuntuUpdate.sh
     # sudo cat UbuntuUpdate.sh
     echo " "
-    echo "----------------------------------------------------"
-    echo "Done Copying UbuntuUpdate.sh script"
-    echo "----------------------------------------------------"
-    echo " "
 
     echo "Copying NewROSBuild.sh script"
     echo "----------------------------------------------------"
-    echo " "
     sudo wget -q https://raw.githubusercontent.com/jimTheSTEAMClown/ROS/master/NewROSBuild.sh -O NewROSBuild.sh
     sudo chmod 755 NewROSBuild.sh
     # sudo cat NewROSBuild.sh
     echo " "
-    echo "----------------------------------------------------"
-    echo "Done Copying NewROSBuild.sh script"
-    echo "----------------------------------------------------"
-    echo " "
+    
 
     echo " "
     echo "----------------------------------------------------"
