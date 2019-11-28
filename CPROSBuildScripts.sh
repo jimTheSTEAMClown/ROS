@@ -21,8 +21,17 @@
 
 pwd
 ls -l
+# This will check to see if the ROSBuildScripts directory exist in the /home/<userDirectoryName>
+# In my case the user for this build will be <steamclown> , but it could be <steamclown2> or some other name.  
+# Update based on your userDirectoryName insid of your /home directory
+DIR="/home/steamclown/ROSBuildScripts/"
+if [[ ! -e $dir ]]; then
+    mkdir $dir
+elif [[ ! -d $dir ]]; then
+    echo "$dir already exists but is not a directory" 1>&2
+fi
 # add check to test if the Scripts dir exists and create if it does not...
-sudo cd ./home/steamclown/Scripts
+sudo cd $dir
 pwd
 ls -l
 
